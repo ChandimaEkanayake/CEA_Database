@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cea_datastore" language="groovy" printOrder="Horizontal" pageWidth="4300" pageHeight="400" orientation="Landscape" columnWidth="4260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="3163"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     store.`fileno` AS store_fileno,
+     store.`dsdivi` AS store_dsdivi,
+     store.`gndivi` AS store_gndivi,
+     store.`e` AS store_e,
+     store.`n` AS store_n,
+     store.`industry` AS store_industry,
+     store.`name` AS store_name,
+     store.`address` AS store_address,
+     store.`activity` AS store_activity,
+     store.`tele` AS store_tele,
+     store.`email` AS store_email,
+     store.`epl` AS store_epl,
+     store.`liceense` AS store_liceense,
+     store.`business` AS store_business,
+     store.`local` AS store_local,
+     store.`gsmd` AS store_gsmd,
+     store.`eplno` AS store_eplno,
+     store.`fro` AS store_fro,
+     store.`ww` AS store_ww,
+     store.`sw` AS store_sw,
+     store.`hasard` AS store_hasard,
+     store.`air` AS store_air,
+     store.`noice` AS store_noice,
+     store.`vibra` AS store_vibra,
+     store.`pta` AS store_pta,
+     store.`remark` AS store_remark
+FROM
+     `store` store]]>
+	</queryString>
+	<field name="store_fileno" class="java.lang.String"/>
+	<field name="store_dsdivi" class="java.lang.String"/>
+	<field name="store_gndivi" class="java.lang.String"/>
+	<field name="store_e" class="java.lang.String"/>
+	<field name="store_n" class="java.lang.String"/>
+	<field name="store_industry" class="java.lang.String"/>
+	<field name="store_name" class="java.lang.String"/>
+	<field name="store_address" class="java.lang.String"/>
+	<field name="store_activity" class="java.lang.String"/>
+	<field name="store_tele" class="java.lang.String"/>
+	<field name="store_email" class="java.lang.String"/>
+	<field name="store_epl" class="java.lang.String"/>
+	<field name="store_liceense" class="java.lang.String"/>
+	<field name="store_business" class="java.lang.String"/>
+	<field name="store_local" class="java.lang.String"/>
+	<field name="store_gsmd" class="java.lang.String"/>
+	<field name="store_eplno" class="java.lang.String"/>
+	<field name="store_fro" class="java.lang.String"/>
+	<field name="store_ww" class="java.lang.String"/>
+	<field name="store_sw" class="java.lang.String"/>
+	<field name="store_hasard" class="java.lang.String"/>
+	<field name="store_air" class="java.lang.String"/>
+	<field name="store_noice" class="java.lang.String"/>
+	<field name="store_vibra" class="java.lang.String"/>
+	<field name="store_pta" class="java.lang.String"/>
+	<field name="store_remark" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<staticText>
+				<reportElement  style="Title" x="555" y="15" width="3132" height="62"/>
+				<textElement verticalAlignment="Top">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[CENTRAL ENVIRONMENTAL AUTHORITY /- THE DATASHEET OF EPL LICENSE AND RELATED INFORMATIONAL COLLECTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="SubTitle" x="2024" y="99" width="441" height="22"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[ For the use of Central Environmental Authority , Sri Lanka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="47" width="149" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial Black" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DEMONTRATION ONLY]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement  positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement  style="Column header" x="17" y="1" width="147" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ File number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="172" y="1" width="122" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[DS division number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="305" y="1" width="127" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[GN division number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="441" y="0" width="71" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ E position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="616" y="1" width="256" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Industry name/catagory]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="884" y="1" width="317" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Name of the owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="1512" y="1" width="200" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Activity based on]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="1725" y="1" width="191" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Contact number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="1929" y="1" width="396" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ E-mail address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2336" y="1" width="129" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ EPL number available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2478" y="1" width="149" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ License number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2641" y="1" width="101" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Buisness]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2834" y="1" width="73" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[      GSMD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3021" y="1" width="117" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[         Duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3154" y="1" width="75" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[waste water]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3330" y="0" width="70" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Hasardous]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3492" y="1" width="93" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Noice emission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3669" y="1" width="179" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Pollution treatment availability]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3860" y="1" width="381" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[                             Remarks based on the industry/activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3411" y="1" width="71" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Air pollution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3241" y="1" width="73" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Solid waste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2919" y="1" width="91" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[           EPL ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="2753" y="1" width="71" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Local area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="1213" y="0" width="284" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[ Address of the industry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="525" y="1" width="77" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[N position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Column header" x="3598" y="1" width="56" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Vibration]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<elementGroup>
+				<frame>
+					<reportElement  style="Row" mode="Opaque" x="1" y="0" width="163" height="15"/>
+					<textField isStretchWithOverflow="true">
+						<reportElement  style="Detail" x="16" y="0" width="147" height="15"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[$F{store_fileno}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</elementGroup>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3881" y="0" width="339" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_remark}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3731" y="0" width="50" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_pta}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3609" y="0" width="35" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_vibra}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3518" y="0" width="41" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_noice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3427" y="0" width="40" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_air}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3344" y="0" width="39" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_hasard}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3262" y="0" width="39" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_sw}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3173" y="0" width="33" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_ww}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="3027" y="0" width="107" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_fro}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2919" y="0" width="91" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_eplno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2834" y="0" width="73" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_gsmd}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2753" y="0" width="71" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_local}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2641" y="0" width="101" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_business}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2478" y="0" width="149" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_liceense}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="2336" y="0" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_epl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="1938" y="0" width="381" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_email}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="1734" y="0" width="178" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_tele}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="1512" y="0" width="200" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_activity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="1219" y="0" width="274" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_address}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="892" y="0" width="303" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="627" y="0" width="245" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_industry}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="525" y="0" width="77" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_n}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="441" y="0" width="71" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_e}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="305" y="0" width="127" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_gndivi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement  style="Detail" x="172" y="0" width="122" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{store_dsdivi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement  positionType="FixRelativeToBottom" x="0" y="3" width="4260" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<frame>
+				<reportElement  mode="Opaque" x="-21" y="1" width="4299" height="24" forecolor="#CCFFCC" backcolor="#D4F0D4"/>
+				<textField>
+					<reportElement  style="Column header" x="4147" y="2" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement  style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="4208" y="3" width="40" height="20" forecolor="#736343"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
